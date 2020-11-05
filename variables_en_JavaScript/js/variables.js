@@ -30,5 +30,36 @@ function variables(){
 
     document.getElementById("text3").innerHTML = "Anys de traspas en " +traspas+ " y " +year+ " son: " +(anys+1)+ "<br>";
 
-    
+    /********************************************** Fase3 ***************************************************************/
+
+        let resultado = "";
+		let calc;
+		let cert = false;
+		let frase1 = "El any " +year+ " es de traspas";
+        let frase2 = "El any " +year+ " no es de traspas";
+        
+        for(i = traspas; i < year; i++) {
+			
+			if(i % 400 == 0 || (i % 4 == 0 && i % 100 != 0) ){
+				
+				calc = i + temps;
+				
+				resultado += " " + calc;
+	
+			}
+			
+        }
+        
+        document.getElementById("text4").innerHTML = "Els anys de traspas desde " +traspas+ " son:" +resultado+ "<br>";
+
+        if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+			cert = true;
+			alert(frase1);
+			
+		} else {
+			cert = false;
+			alert(frase2);
+			
+		}
+
 };
