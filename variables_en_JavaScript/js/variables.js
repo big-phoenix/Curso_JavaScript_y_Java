@@ -62,4 +62,19 @@ function variables(){
 			
 		}
 
+    /********************************************** Fase4 ***************************************************************/
+
+        let nomComplet = "El meu nom és " +name+ " " +firtName+ " " +seconName;
+        let dataNaixament = "Vaig néixer el " +day+ "/" +month+ "/" +year;
+        
+        if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            cert = true;
+            
+            document.getElementById("text5").innerHTML = "Exemple de sortida per consola: <br>" +nomComplet+ "<br>" +dataNaixament+ "<br> El menu any de neixament es de traspas";
+			
+		} else {
+			cert = false;
+            document.getElementById("text5").innerHTML = "Exemple de sortida per consola: <br>" +nomComplet+ "<br>" +dataNaixament+ "<br> El menu any de neixament es de traspas";			
+		}
+
 };
